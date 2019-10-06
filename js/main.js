@@ -2,6 +2,7 @@ const players = [];
 
 function validateCamps(name, surname, dni, email, phone, date, account) {
   if (name === '' || surname === '' || dni === '' || email === '' || phone === '' || date === '' || account === '') {
+    alert('Es necesario rellenar todos los campos del formulario');
     return false;
   } else {
     return true;
@@ -88,6 +89,7 @@ function checkDuplicatePlayer(dni) {
   for (var i = 0; i < players.length; i++) {
     let player = players[i]
     if (player[2] == dni) {
+      alert('jugador duplicado');
       return false;
     };
   }
@@ -158,11 +160,7 @@ function validateInfo() {
         players.sort();
         printPlayers(amateur, profesional, dni);
         document.datosP.reset();
-      } else {
-        alert('jugador repetido');
       };
     };
-  } else {
-    alert('Es necesario rellenar todos los campos del formulario');
   };
 };
