@@ -71,26 +71,15 @@ function validateAccount(account) {
   };
 };
 
-function addPlayer(name, surname, email, type) {
-  let amateur = document.getElementById('begginer');
-  let profesional = document.getElementById('profesional');
-
-  if (type === 'amateur') {
-    amateur.innerHTML = '<div>' + '<p>' + name + ' ' + surname + '</p>' + '<p>' + email + '</p>' + '<p>' + type + '</p>' + '</div>';
-  } else {
-    profesional.innerHTML = '<div>' + '<p>' + name + ' ' + surname + '</p>' + '<p>' + email + '</p>' + '<p>' + type + '</p>' + '</div>';
-  };
-};
-
 function printPlayers(amateur, professional, dni) {
   amateur.innerHTML = '';
   professional.innerHTML = '';
   for (var i = 0; i < players.length; i++) {
     let player = players[i];
     if (player[7] === 'amateur') {
-      amateur.innerHTML += '<div class="bg-grey2 list2">' + '<p>' + player[0] + ' ' + player[1] + ' ' + player[3] + ' ' + player[7] + '</p>' + '</div>';
+      amateur.innerHTML += '<p>' + player[0] + ' ' + player[1] + ' ' + '-' + ' ' + player[3] + ' ' + '-' + ' ' + player[7] + '</p>';
     } else if (player[7] === 'profesional') {
-      professional.innerHTML += '<div class="bg-grey2 list2">' + '<p>' + player[0] + ' ' + player[1] + ' ' + player[3] + ' ' + player[7] + '</p>' + '</div>';
+      professional.innerHTML += '<p>' + player[0] + ' ' + player[1] + ' ' + '-' + ' ' + player[3] + ' ' + '-' + ' ' + player[7] + '</p>';
     };
   };
 };
