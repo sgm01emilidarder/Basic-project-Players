@@ -31,7 +31,7 @@ function validateSurname(surname) {
   if (/^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/.test(surname)) {
     return true;
   } else {
-    alert('El/los apellido/s que has introducido no es válido');
+    alert('El/los apellido/s que has introducido no son válidos');
     return false;
   };
 };
