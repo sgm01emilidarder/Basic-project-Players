@@ -63,7 +63,7 @@ function validateDni(dni) {
 };
 
 function validateAccount(account) {
-  if (/^[A-Z]{2}[0-9]{18}$/.test(account)) {
+  if (/^[A-Z]{2}[0-9]{22}$/.test(account)) {
     return true;
   } else {
     alert('La cuenta bancaria que has introducido no es válida');
@@ -98,9 +98,7 @@ function printPlayers(amateur, professional, dni) {
 function checkDuplicatePlayer(dni) {
   for (var i = 0; i < players.length; i++) {
     let player = players[i]
-    if (players == '') {
-      return true;
-    } else if (player[2] == dni) {
+    if (player[2] == dni) {
       return false;
     };
   }
@@ -168,12 +166,12 @@ function validateInfo() {
     if (validateEmail(email) && validateName(name) && validateSurname(surname) && validatePhone(phone) && validateDate(date) && validateDni(dni) && validateAccount(account) && validateAge(type)) {
       if (checkDuplicatePlayer(dni)) {
         players.push([name, surname, dni, email, phone, date, account, type]);
+        players.sort();
         printPlayers(amateur, profesional, dni);
         document.datosP.reset();
       } else {
         alert('jugador repetido');
       };
-      console.log(players);
     };
   } else {
     alert('Es necesario rellenar todos los campos del formulario');
