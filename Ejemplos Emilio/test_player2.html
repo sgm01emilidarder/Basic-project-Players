@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>a</title>
+  <script type="text/javascript">
+    let players = [
+      ["12345678A", "Pedro", "Martínez Riera", "666666666", "pmartinez@gmail.com", "12/12/1990", "ES123456789123456789", "PRO"],
+      ["12345679A", "Alfonso", "Martínez Riera", "666666662", "amartinez@gmail.com", "12/12/1980", "ES123456789123456788", "PRO"],
+      ["12345677A", "Juan", "Martínez Riera", "666666636", "jmartinez@gmail.com", "12/12/1970", "ES123456789123456787", "PRO"],
+      ["12345676A", "Maria", "Martínez Riera", "666664666", "mmartinez@gmail.com", "12/12/2005", "ES123456789123456786", "BEG"],
+      ["12345675A", "Pablo", "Martínez Riera", "666666566", "pamartinez@gmail.com", "12/12/2007", "ES123456789123456785", "BEG"],
+      ["12345674A", "Tomás", "Martínez Riera", "666676666", "tmartinez@gmail.com", "12/12/1975", "ES123456789123456784", "PRO"]
+    ]
+
+    window.onload = function() {
+      console.log("cargado correctamente");
+
+      let ContainerPlayers = document.getElementById("c_players_beg");
+
+      createListPlayers(ContainerPlayers, players, "BEG");
+
+      let ContainerPlayerspro = document.getElementById("c_players_pro");
+
+      createListPlayers(ContainerPlayerspro, players, "PRO");
+
+
+    };
+
+    function createListPlayers(pContenedor, pJugadores, pTipo) {
+      pContenedor.innerHTML = "<h1>" + "Lista de jugadores" + "<h1>";
+
+      for (let i = 0; i < pJugadores.length; i++) {
+        let jugador = pJugadores[i];
+        if (pTipo == jugador[7]) {
+          pContenedor.innerHTML += "<p>" + jugador[1] + " " + jugador[2] + " " + jugador[4] + " " + jugador[7] + "</p>";
+        };
+      };
+
+    };
+  </script>
+</head>
+
+<body>
+  <div id="c_players_pro">
+  </div>
+  <div id="c_players_beg">
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulario</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Registro de jugadores</h1>
+  </header>
+  <section>
+    <div class="border bg-grey">
+      <p><b>Nuevo jugador</b></p>
+    </div>
+    <div class="border2 bg-blue">
+      <p><b>Datos del jugador</b></p>
+      <form action="" name="datosP">
+        <div class="auto">
+          DNI: <input type="text" id="dni" name="dni" placeholder="00000000X" required>
+          Nombre: <input type="text" id="name" name="nombre" placeholder="nombre" required>
+          Apellidos: <input type="text" id="surname" name="apellidos" placeholder="apellidos" required>
+          Fecha nacimiento: <input type="text" id="date" name="fecha" placeholder="dd/mm/yyyy" required>
+        </div>
+        <div>
+          Teléfono: <input type="text" id="phone" name="teléfono" placeholder="teléfono" required>
+          Email: <input type="text" id="email" name="email" placeholder="email" required>
+          Cuenta corriente: <input type="text" id="account" name="cuenta" placeholder="" required>
+          Tipo de jugador: <select name="tipo" id="type">
+            <option value="amateur">Amateur</option>
+            <option value="profesional">Profesional</option>
+          </select>
+        </div>
+        <div>
+          <input type="button" value="Añadir jugador" onclick="validateInfo()">
+        </div>
+      </form>
+    </div>
+    <div class="border bg-grey">
+      <p><b>Lista de jugadores</b></p>
+    </div>
+    <div class="list bg-blue3" id="begginer">
+
+    </div>
+    <div class="list bg-blue2" id="profesional">
+    </div>
+  </section>
+  <script type="text/javascript" src="js/validate3.js"></script>
+</body>
+
+</html>
