@@ -88,9 +88,9 @@ function printPlayers(amateur, professional, dni) {
   for (var i = 0; i < players.length; i++) {
     let player = players[i];
     if (player[7] === 'amateur') {
-      amateur.innerHTML += '<div>' + '<p>' + player[0] + ' ' + player[1] + ' ' + player[3] + ' ' + player[7] + '</p>' + '</div>';
+      amateur.innerHTML += '<div class="bg-grey list2">' + '<p>' + player[0] + ' ' + player[1] + ' ' + player[3] + ' ' + player[7] + '</p>' + '</div>';
     } else if (player[7] === 'profesional') {
-      professional.innerHTML += '<div>' + '<p>' + player[0] + ' ' + player[1] + ' ' + player[3] + ' ' + player[7] + '</p>' + '</div>';
+      professional.innerHTML += '<div class="bg-grey list2">' + '<p>' + player[0] + ' ' + player[1] + ' ' + player[3] + ' ' + player[7] + '</p>' + '</div>';
     };
   };
 };

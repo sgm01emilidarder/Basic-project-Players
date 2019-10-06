@@ -49,7 +49,12 @@ div {
   border-radius: 10px 10px 10px 10px;
   width: 49%;
   float: left;
-  border: 0px solid #000000;
+}
+
+.list2 {
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .auto {
