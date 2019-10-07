@@ -7,30 +7,31 @@
   <title>formulario</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
   <header>
-    <h1>Registro de jugadores</h1>
+    <h1><i class="fas fa-address-book"></i> Registro de jugadores</h1>
   </header>
   <section>
     <div class="border bg-grey">
-      <p><b>Nuevo jugador</b></p>
+      <p><i class="fas fa-child"></i> <b>Nuevo jugador</b></p>
     </div>
     <div class="border2 bg-blue">
-      <p><b>Datos del jugador</b></p>
+      <p><i class="fas fa-file-alt"></i> <b>Datos del jugador</b></p>
       <form action="" name="datosP">
         <div class="auto">
-          DNI: <input type="text" id="dni" name="dni" placeholder="00000000X" required>
-          Nombre: <input type="text" id="name" name="nombre" placeholder="nombre" required>
-          Apellidos: <input type="text" id="surname" name="apellidos" placeholder="apellidos" required>
-          Fecha nacimiento: <input type="text" id="date" name="fecha" placeholder="dd/mm/yyyy" required>
+          <i class="fas fa-address-card"></i> DNI: <input type="text" id="dni" name="dni" placeholder="00000000X" required>
+          <i class="fas fa-user"></i> Nombre: <input type="text" id="name" name="nombre" placeholder="nombre" required>
+          <i class="fas fa-user"></i> Apellidos: <input type="text" id="surname" name="apellidos" placeholder="apellidos" required>
+          <i class="fas fa-calendar-alt"></i> Fecha nacimiento: <input type="text" id="date" name="fecha" placeholder="dd/mm/yyyy" required>
         </div>
         <div>
-          Teléfono: <input type="text" id="phone" name="teléfono" placeholder="teléfono" required>
-          Email: <input type="text" id="email" name="email" placeholder="email" required>
-          Cuenta corriente: <input type="text" id="account" name="cuenta" placeholder="XX0000000000000000000000" required>
-          Tipo de jugador: <select name="tipo" id="type">
+          <i class="fas fa-mobile-alt"></i> Teléfono: <input type="text" id="phone" name="teléfono" placeholder="teléfono" required>
+          <i class="fas fa-envelope-open"></i> Email: <input type="text" id="email" name="email" placeholder="email" required>
+          <i class="fas fa-credit-card"></i> Cuenta corriente: <input type="text" id="account" name="cuenta" placeholder="XX0000000000000000000000" required>
+          <i class="fas fa-user-circle"></i> Tipo de jugador: <select name="tipo" id="type">
             <option value="amateur">Amateur</option>
             <option value="profesional">Profesional</option>
           </select>
@@ -41,7 +42,7 @@
       </form>
     </div>
     <div class="border bg-grey">
-      <p><b>Lista de jugadores</b></p>
+      <p><i class="fas fa-bars"></i> <b>Lista de jugadores</b></p>
     </div>
     <div class="list bg-blue3" id="begginer">
 
